@@ -56,7 +56,7 @@
 	let selected = 'Alabama';
 </script>
 
-<div>
+<div class="select-container">
 	<select bind:value={selected} on:change={() => (activeState = selected)}>
 		{#each STATES as state}
 			<option value={state}>
@@ -65,3 +65,19 @@
 		{/each}
 	</select>
 </div>
+
+<style>
+	.select-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		padding-top: 50%;
+	}
+
+	select {
+		width: 200px;
+		height: 35px;
+		font-size: 18px;
+	}
+</style>
