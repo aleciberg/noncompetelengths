@@ -40,7 +40,13 @@
 		flex-wrap: wrap;
 		flex-direction: row;
 		justify-content: center;
-		background-color: #7f6239;
+		background: rgb(90, 185, 161);
+		background: linear-gradient(
+			90deg,
+			rgba(90, 185, 161, 1) 0%,
+			rgba(44, 158, 113, 1) 49%,
+			rgba(21, 219, 124, 1) 100%
+		);
 	}
 
 	.content-container {
@@ -48,8 +54,10 @@
 		width: 80vw;
 		display: flex;
 		margin-top: 100px;
-		background-color: #c4a77d;
+		background-color: lightgrey;
+		border: 1px solid darkgrey;
 		border-radius: 20px;
+		box-shadow: 10px 10px 8px #888888;
 	}
 
 	.left-container {
@@ -65,7 +73,7 @@
 	.footer-text {
 		font-size: 14px;
 		padding-left: 10px;
-		color: #2ba54f;
+		color: blue;
 		font-family: Montserrat;
 	}
 
