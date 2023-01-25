@@ -1,5 +1,5 @@
 <script>
-	import { STATE_MAP } from '../assets/constants';
+	import { STATE_MAP } from '../constants';
 	import Card, { Content, PrimaryAction, Media, MediaContent } from '@smui/card';
 
 	export let activeState;
@@ -8,20 +8,12 @@
 	$: stateData = STATE_MAP[activeState];
 </script>
 
-<div class="card-display">
+<div class="card-display" style="margin-top: 60px;">
 	<div class="card-container">
-		<Card>
+		<Card style="margin: 10px; display: flex; justify-content: center; align-items: center;">
 			<Media class="card-media-16x9" aspectRatio="16x9">
 				<MediaContent>
-					<!-- <h2
-						class="mdc-typography--headline6"
-						style="color: #fff; position: absolute; bottom: 16px; left: 16px; margin: 0;"
-					>
-						A card with 16x9 media.
-					</h2> -->
-					{#if stateData.flag !== ''}
-						<img class="state-flag" src={stateData.flag} />
-					{/if}
+					<img class="state-flag" src={`state_flags/${activeState}.png`} alt="the state flag" />
 				</MediaContent>
 			</Media>
 		</Card>
@@ -42,15 +34,23 @@
 
 	<div class="card-container">
 		<Card>
-			<div style="padding: 1rem;">
+			<div style="padding: 1rem">
 				<h2 class="mdc-typography--headline6" style="margin: 0;">{activeState}</h2>
 				<h3 class="mdc-typography--subtitle2" style="margin: 0; color: #888;">
 					Length of Noncompete: {stateData.Length}
 				</h3>
 			</div>
-			<PrimaryAction on:click={console.log('clicked')}>
+			<PrimaryAction style=" padding: 15px" on:click={console.log('clicked')}>
 				<Media class="card-media-16x9" aspectRatio="16x9" />
-				<Content class="mdc-typography--body2">Literally is this even updating</Content>
+				<h2 class="mdc-typography--headline6" style="margin: 0; ">Our Expert Take</h2>
+				<Content class="mdc-typography--body2"
+					>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed lacinia leo. Sed
+					placerat metus nec diam congue, vitae convallis justo ultricies. Vestibulum ante ipsum
+					primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed lorem nisi, posuere
+					quis ullamcorper id, tempor a ipsum. Mauris varius aliquet nisl ut ornare. Aliquam egestas
+					lorem a est porttitor, in tincidunt arcu commodo. Nulla facilisi. Sed congue massa at
+					commodo volutpat. Pellentesque cursus convallis tincidunt.</Content
+				>
 			</PrimaryAction>
 		</Card>
 	</div>

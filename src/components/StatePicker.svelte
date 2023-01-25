@@ -57,13 +57,16 @@
 </script>
 
 <div class="select-container">
-	<select bind:value={selected} on:change={() => (activeState = selected)}>
-		{#each STATES as state}
-			<option value={state}>
-				{state}
-			</option>
-		{/each}
-	</select>
+	<h1>Select a State</h1>
+	<span
+		><select bind:value={selected} on:change={() => (activeState = selected)}>
+			{#each STATES as state}
+				<option value={state}>
+					{state}
+				</option>
+			{/each}
+		</select></span
+	>
 </div>
 
 <style>
@@ -71,8 +74,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
 		margin: auto;
-		padding-top: 50%;
+		padding-top: 30%;
 	}
 
 	select {
