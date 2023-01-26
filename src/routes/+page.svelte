@@ -27,7 +27,7 @@
 		</div>
 	</div>
 	<div class="footer-container">
-		<p class="footer-text">Made with love by Alec Iberg and Jordan Melvin</p>
+		<p class="footer-text">Made with ♥ by Alec Iberg and Jordan Melvin</p>
 	</div>
 </div>
 
@@ -54,10 +54,7 @@
 		width: 80vw;
 		display: flex;
 		margin-top: 100px;
-		background-color: lightgrey;
-		border: 1px solid darkgrey;
-		border-radius: 20px;
-		box-shadow: 10px 10px 8px #888888;
+		gap: 25px;
 	}
 
 	.left-container {

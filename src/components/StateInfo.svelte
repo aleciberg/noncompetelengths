@@ -8,7 +8,14 @@
 	$: stateData = STATE_MAP[activeState];
 </script>
 
-<div class="card-display" style="margin-top: 60px;">
+<div
+	class="card-display"
+	style="background-color: lightgrey;
+	border: 1px solid darkgrey;
+	border-radius: 20px;
+	box-shadow: 10px 10px 8px #888888;
+	height: 70vh;"
+>
 	<div class="card-container">
 		<Card style="margin: 10px; display: flex; justify-content: center; align-items: center;">
 			<Media class="card-media-16x9" aspectRatio="16x9">
@@ -18,19 +25,6 @@
 			</Media>
 		</Card>
 	</div>
-
-	<!-- <div class="card-container">
-		<Card style="min-width: 300px;">
-			<Media class="card-media-square" aspectRatio="square">
-				<div style="color: #fff; position: absolute; bottom: 16px; left: 16px;">
-					<h2 class="mdc-typography--headline6" style="margin: 0;">{activeState}</h2>
-					<h3 class="mdc-typography--subtitle2" style="margin: 0;">
-						Length of Noncompete: {stateData.length}
-					</h3>
-				</div>
-			</Media>
-		</Card>
-	</div> -->
 
 	<div class="card-container">
 		<Card>
@@ -63,14 +57,6 @@
 </div>
 
 <style>
-	/* * :global(.card-media-16x9) {
-		background-image: url(https://place-hold.it/320x180?text=16x9&fontsize=23);
-	}
-
-	* :global(.card-media-square) {
-		background-image: url(https://place-hold.it/320x320?text=square&fontsize=23);
-	} */
-
 	.state-flag {
 		height: 281px;
 		width: 500px;

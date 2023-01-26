@@ -76,7 +76,13 @@
 		align-items: center;
 		flex-direction: column;
 		margin: auto;
-		padding-top: 30%;
+		height: 70vh;
+		width: 30vw;
+		/* padding-top: 30%; */
+		background-color: lightgrey;
+		border: 1px solid darkgrey;
+		border-radius: 20px;
+		box-shadow: 10px 10px 8px #888888;
 	}
 
 	select {
