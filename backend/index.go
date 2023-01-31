@@ -12,15 +12,18 @@ import (
 )
 
 // yeah i will need to switch this
-type Movie struct {
-	MovieID   string `json:"movieid"`
-	MovieName string `json:"moviename"`
+type State struct {
+	name   		string `json:"name"`
+	law 		string `json:"law"`
+	lawcode 	string `json:"lawcode"`
+	date 		string `json:"date"`
+	experttake 	string `json:"expertake"`
 }
 
 // this will be useful as is
 type JsonResponse struct {
 	Type    string  `json:"type"`
-	Data    []Movie `json:"data"` // except this will not be movie
+	Data    []State `json:"data"` 
 	Message string  `json:"message"`
 }
 
